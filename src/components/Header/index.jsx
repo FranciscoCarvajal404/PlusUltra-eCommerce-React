@@ -50,6 +50,7 @@ const StyleHeader = styled.header`
     
         h1{
             span{
+                margin-left: 8px;
                 display: block;
             }
         }
