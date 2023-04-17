@@ -1,25 +1,27 @@
 import styled from "styled-components";
+import {colorClaro} from "../../components/UI/variables"
 
 const StyledCarrousel = styled.section`
     display: flex;
     flex-wrap: nowrap;
-    overflow: scroll;
+    overflow-x: scroll;
     overflow-y: hidden;
+    width: 100%;
 
+    gap: 64px;
     box-sizing: border-box;
-
+    
     .categorias__grupo{
         display: flex;
         align-items: center;
 
         width: 80%;
-        box-sizing: border-box;
-
-        padding: 0 32px;
-        margin-bottom: 64px;
+        margin-bottom: 32px;
+        color: ${colorClaro};
         
         img{
-            max-width: 150px;
+            min-width: 100px;
+            max-width: 200px;
             margin-right: 8px;
         }
 
@@ -30,7 +32,7 @@ const StyledCarrousel = styled.section`
             flex-direction: column;
 
             h2{
-                font-weight: 500;
+                font-weight: 600;
                 font-size: 2rem;
                 margin-bottom: 8px;
             }
@@ -51,7 +53,7 @@ const Carrousel = () =>{
                 <img src="src/img/telescopio.webp" alt=""/>
                 <div>
                     <h2>Telescopios</h2>
-                    <h3>Descubre el cosmos</h3>
+                    <h3>Descubre el cosmos y el espacio</h3>
                     <button>Ver productos</button>
                 </div>
             </div>

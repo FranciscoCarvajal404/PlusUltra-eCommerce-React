@@ -1,15 +1,19 @@
 import styled from "styled-components";
 
+import { colorClaro} from "../UI/variables";
+
 const StyleHeader = styled.header`
     width: 100%;
     height: 70px;
     box-sizing: border-box;
 
+    color: ${colorClaro};
+
     background: none;
 
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
     position: fixed;
     top: 0;
@@ -64,12 +68,21 @@ const StyleHeader = styled.header`
         }
     
 }
-
 `
+
+const animateHeader = (e) =>{
+    e.preventDefault();
+    const header = document.querySelector(".header");
+
+    const windowHeight = window.scrollY;
+    header.classList.toggle("header--active", windowHeight>0);
+}
+
+window.addEventListener("scroll", animateHeader);
 
 const Header = () =>{
     return(
-        <StyleHeader>
+        <StyleHeader className="header">
             <h1>
                 <img src="src/img/logo.svg" alt="Plus Ultra logo"/>
                 <span><b>Plus</b>Ultra</span>

@@ -2,24 +2,35 @@
     "productos": [
         {
             "id": "1",
+            "imagen": "https://universorayado.naukas.com/files/2020/07/IMG_6962_med-480x640.jpg",
             "categoria": "telescopios",
             "titulo": "Articulo 1",
-            "meta":"Meta 1",
-            "descripcion": "Descripcion 1"
+            "descripcion": "Descripcion 1",
+            "precio": "$100"
         },
         {
             "id": "2",
+            "imagen": "https://static.vecteezy.com/system/resources/previews/004/533/962/non_2x/senior-man-outside-enjoying-nature-looking-through-binoculars-photo.jpg",
             "categoria": "binoculares",
             "titulo": "Articulo 2",
-            "meta":"Meta 2",
-            "descripcion": "Descripcion 2"
+            "descripcion": "Descripcion 2",
+            "precio": "$200"
         },
         {
             "id": "3",
-            "categoria": "Microscopios",
+            "imagen": "https://images.pexels.com/photos/4032060/pexels-photo-4032060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "categoria": "microscopios",
             "titulo": "Articulo 3",
-            "meta":"Meta 3",
-            "descripcion": "Descripcion 3"
+            "descripcion": "Descripcion 3",
+            "precio": "$300"
+        },
+        {
+            "id": "4",
+            "imagen": "https://us.123rf.com/450wm/nanastudio/nanastudio2101/nanastudio210100106/161598098-mirando-a-trav%C3%A9s-de-los-binoculares-concepto-de-viaje-activo.jpg?ver=6",
+            "categoria": "binoculares",
+            "titulo": "Articulo 4",
+            "descripcion": "Descripcion 4",
+            "precio": "$100"
         }
     ],
 
@@ -28,10 +39,5 @@
             "usuario": "francisco",
             "password": "123456"
         }
-    ],
-    "categorias": [
-            "Telescopios",
-            "Binoculares",
-            "Microscopios"
     ]
 }

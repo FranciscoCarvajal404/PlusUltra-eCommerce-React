@@ -1,16 +1,26 @@
 import styled from "styled-components";
+import { colorClaro } from "../../components/UI/variables";
 
 const StyledMain = styled.main`
-    background-image:  url(src/img/main-bg.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(src/img/main-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     box-sizing: border-box;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 35px;
+
+    color: ${colorClaro};
+
+    line-height: normal;
+
     width: 100%;
     height: 100vh;
 
-    margin-bottom: 64px;
+    margin-bottom: 32px;
 
     div{
         width: 100%;
