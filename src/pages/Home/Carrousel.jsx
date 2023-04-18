@@ -8,7 +8,9 @@ const StyledCarrousel = styled.section`
     overflow-y: hidden;
     width: 100%;
 
-    gap: 64px;
+    padding: 0 64px;
+
+    gap: 128px;
     box-sizing: border-box;
     
     .categorias__grupo{
@@ -20,8 +22,8 @@ const StyledCarrousel = styled.section`
         color: ${colorClaro};
         
         img{
-            min-width: 100px;
-            max-width: 200px;
+            width: 40%;
+            min-width: 200px;
             margin-right: 8px;
         }
 

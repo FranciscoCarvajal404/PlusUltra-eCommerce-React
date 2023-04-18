@@ -31,6 +31,166 @@
             "titulo": "Articulo 4",
             "descripcion": "Descripcion 4",
             "precio": "$100"
+        },
+        {
+            "id": "5",
+            "imagen": "https://m.media-amazon.com/images/I/710lKUS8llL.jpg",
+            "categoria": "binoculares",
+            "titulo": "Articulo 5",
+            "descripcion": "Descripcion 5",
+            "precio": "$500"
+        },
+        {
+            "id": "6",
+            "imagen": "https://ss627.liverpool.com.mx/xl/1119885961.jpg",
+            "categoria": "binoculares",
+            "titulo": "Articulo 6",
+            "descripcion": "Descripcion 6",
+            "precio": "$600"
+        },
+        {
+            "id": "7",
+            "imagen": "https://m.media-amazon.com/images/I/6193w78M29L._AC_SY355_.jpg",
+            "categoria": "binoculares",
+            "titulo": "Articulo 7",
+            "descripcion": "Descripcion 7",
+            "precio": "$700"
+        },
+        {
+            "id": "8",
+            "imagen": "https://m.media-amazon.com/images/I/71Ugn1F2shL._AC_UF894,1000_QL80_.jpg",
+            "categoria": "binoculares",
+            "titulo": "Articulo 8",
+            "descripcion": "Descripcion 8",
+            "precio": "$800"
+        },
+        {
+            "id": "9",
+            "imagen": "https://www.celestronmexico.com/wp-content/uploads/2021/06/72355-LandScout-8-24x50-Porro-01.jpg",
+            "categoria": "binoculares",
+            "titulo": "Articulo 9",
+            "descripcion": "Descripcion 9",
+            "precio": "$900"
+        },
+        {
+            "id": "10",
+            "imagen": "https://m.media-amazon.com/images/I/814hNqgd6DS.jpg",
+            "categoria": "telescopios",
+            "titulo": "Articulo 10",
+            "descripcion": "Descripcion 10",
+            "precio": "$1,000"
+        },
+        {
+            "id": "11",
+            "imagen": "https://m.media-amazon.com/images/I/61+VVQ9l7UL.jpg",
+            "categoria": "telescopios",
+            "titulo": "Articulo 11",
+            "descripcion": "Descripcion 11",
+            "precio": "$11,000"
+        },
+        {
+            "id": "12",
+            "imagen": "https://http2.mlstatic.com/D_NQ_NP_723959-MLM52211750020_102022-O.jpg",
+            "categoria": "telescopios",
+            "titulo": "Articulo 12",
+            "descripcion": "Descripcion 12",
+            "precio": "$12,000"
+        },
+        {
+            "id": "13",
+            "imagen": "https://www.celestronmexico.com/wp-content/uploads/2020/09/22461_StarSense_Explorer_DX_130_01.jpg",
+            "categoria": "telescopios",
+            "titulo": "Articulo 13",
+            "descripcion": "Descripcion 13",
+            "precio": "$13,000"
+        },
+        {
+            "id": "14",
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3f/HST-SM4.jpeg",
+            "categoria": "telescopios",
+            "titulo": "Articulo 14",
+            "descripcion": "Descripcion 14",
+            "precio": "$14,000"
+        },
+        {
+            "id": "15",
+            "imagen": "https://m.media-amazon.com/images/I/71SwllVQeiL._AC_SS450_.jpg",
+            "categoria": "telescopios",
+            "titulo": "Articulo 15",
+            "descripcion": "Descripcion 15",
+            "precio": "$15,000"
+        },
+        {
+            "id": "16",
+            "imagen": "https://skyshop.mx/wp-content/uploads/2021/09/Telescopio-Q50-Starter.3.jpg",
+            "categoria": "telescopios",
+            "titulo": "Articulo 16",
+            "descripcion": "Descripcion 16",
+            "precio": "$16,000"
+        },
+        {
+            "id": "17",
+            "imagen": "https://m.media-amazon.com/images/I/71r+enthi4L._AC_SX425_.jpg",
+            "categoria": "microscopios",
+            "titulo": "Articulo 17",
+            "descripcion": "Descripcion 17",
+            "precio": "$17,00"
+        },
+        {
+            "id": "18",
+            "imagen": "https://m.media-amazon.com/images/I/71Bp7vCyXCL.jpg",
+            "categoria": "microscopios",
+            "titulo": "Articulo 18",
+            "descripcion": "Descripcion 18",
+            "precio": "$18,00"
+        },
+        {
+            "id": "19",
+            "imagen": "https://www.lifeder.com/wp-content/uploads/2017/07/microscopio-optico-1.jpg",
+            "categoria": "microscopios",
+            "titulo": "Articulo 19",
+            "descripcion": "Descripcion 19",
+            "precio": "$19,00"
+        },
+        {
+            "id": "20",
+            "imagen": "https://www.zeigenmx.com/images/thumbs/0003762_microscopio-binocular-biologico-plan-acromatico-al-infinito_600.jpeg",
+            "categoria": "microscopios",
+            "titulo": "Articulo 20",
+            "descripcion": "Descripcion 20",
+            "precio": "$20,00"
+        },
+        {
+            "id": "21",
+            "imagen": "https://www.abatec.com.mx/wp-content/uploads/2019/08/Microscopio-iScope-petrogr%C3%A1fico.jpg",
+            "categoria": "microscopios",
+            "titulo": "Articulo 21",
+            "descripcion": "Descripcion 21",
+            "precio": "$21,00"
+        },
+        {
+            "id": "22",
+            "imagen": "https://img.interempresas.net/FotosArtProductos/P101748.jpg",
+            "categoria": "microscopios",
+            "titulo": "Articulo 22",
+            "descripcion": "Descripcion 22",
+            "precio": "$22,00"
+        },
+        {
+            "id": "23",
+            "imagen": "https://www.celestronmexico.com/wp-content/uploads/2018/08/MicroscopioDigital_44341.jpg",
+            "categoria": "microscopios",
+            "titulo": "Articulo 23",
+            "descripcion": "Descripcion 23",
+            "precio": "$23,00"
+        },
+        {
+            "id": "24",
+            "imagen": "https://skyshop.mx/wp-content/uploads/2021/09/micro-digital.jpg",
+            "categoria": "microscopios",
+            "titulo": "Articulo 24",
+            "descripcion": "Descripcion 24",
+            "precio": "$24,00"
         }
     ],
 
