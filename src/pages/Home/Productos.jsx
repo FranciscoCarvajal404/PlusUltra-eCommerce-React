@@ -74,7 +74,9 @@ const Productos = ({url}) =>{
         buscar(url, setProductos)
     },[url])
 
-
+    let i = 0;
+    let j = 0;
+    let k = 0;
     return(
         <StyledProductos>
             <h2>Telescopios</h2>
@@ -82,7 +84,8 @@ const Productos = ({url}) =>{
                 {
                     productos.map(productos =>{
                         const {id, categoria, titulo, precio, imagen } = productos
-                        if(categoria == "telescopios"){
+                        if(categoria == "telescopios" && i < 6){
+                            i ++
                             return(
                                 <div key={id} className="item">
                                     <img src={imagen}/>
@@ -100,7 +103,8 @@ const Productos = ({url}) =>{
             {
                     productos.map(productos =>{
                         const {id, categoria, titulo, precio, imagen } = productos
-                        if(categoria == "binoculares"){
+                        if(categoria == "binoculares" && j < 6){
+                            j++
                             return(
                                 <div key={id} className="item">
                                     <img src={imagen}/>
@@ -118,7 +122,8 @@ const Productos = ({url}) =>{
             {
                     productos.map(productos =>{
                         const {id, categoria, titulo, precio, imagen } = productos
-                        if(categoria == "microscopios"){
+                        if(categoria == "microscopios" && k < 6){
+                            k++
                             return(
                                 <div key={id} className="item">
                                     <img src={imagen}/>
