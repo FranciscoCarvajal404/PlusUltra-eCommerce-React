@@ -156,6 +156,10 @@ body {
           transition: all ease 0.4s;
       }
 
+    b{
+      font-weight: bold;
+    }
+
 `
 
 export default GlobalStyle

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {colorClaro} from "../../components/UI/variables"
+import { Button } from "../../components/UI";
 
 const StyledCarrousel = styled.section`
     display: flex;
@@ -24,7 +25,7 @@ const StyledCarrousel = styled.section`
         img{
             width: 40%;
             min-width: 200px;
-            margin-right: 8px;
+            margin-right: 16px;
         }
 
         div{
@@ -32,10 +33,11 @@ const StyledCarrousel = styled.section`
 
             display: flex;
             flex-direction: column;
+            line-height: normal;
 
             h2{
                 font-weight: 600;
-                font-size: 2rem;
+                font-size: 3rem;
                 margin-bottom: 8px;
             }
         }
@@ -56,7 +58,7 @@ const Carrousel = () =>{
                 <div>
                     <h2>Telescopios</h2>
                     <h3>Descubre el cosmos y el espacio</h3>
-                    <button>Ver productos</button>
+                    <Button>Ver productos</Button>
                 </div>
             </div>
                 
@@ -65,7 +67,7 @@ const Carrousel = () =>{
                 <div>
                     <h2>Binoculares</h2>
                     <h3>Explora el cielo y las estrellas</h3>
-                    <button>Ver productos</button>
+                    <Button>Ver productos</Button>
                 </div>
             </div>
             
@@ -74,7 +76,7 @@ const Carrousel = () =>{
                 <div>
                     <h2>Microscopios</h2>
                     <h3>Conoce el reino microscopico</h3>
-                    <button>Ver productos</button>
+                    <Button>Ver productos</Button>
                 </div>
             </div>
         </StyledCarrousel>

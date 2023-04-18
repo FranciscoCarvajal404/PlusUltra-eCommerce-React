@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-import { colorClaro} from "../UI/variables";
+import { colorClaro } from "../UI/variables";
+import { Button } from "../UI";
 
 const StyleHeader = styled.header`
     width: 100%;
@@ -56,6 +57,7 @@ const StyleHeader = styled.header`
             span{
                 margin-left: 8px;
                 display: block;
+                font-size: 1.8rem;
             }
         }
 
@@ -92,7 +94,7 @@ const Header = () =>{
 
             <div>
                 <a href="#">
-                    <button>Login</button>
+                    <Button>Login</Button>
                 </a>
             </div>
 

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colorClaro } from "../../components/UI/variables";
+import { Button } from "../../components/UI"
 
 const StyledMain = styled.main`
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(src/img/main-bg.jpg);
@@ -49,13 +50,17 @@ const StyledMain = styled.main`
     }
 `
 
+const ButtonMain = styled(Button)`
+    padding: 16px 32px;
+`
+
 const Main = () =>{
     return(
         <StyledMain>
             <div>
                 <h2>Siempre hay algo más allá *(WIP)*</h2>
                 <h3>30% de descuento en telescopios seleccionados</h3>
-                <button>Ver telescopios</button>
+                <ButtonMain>Ver telescopios</ButtonMain>
             </div>
         </StyledMain>
     );
