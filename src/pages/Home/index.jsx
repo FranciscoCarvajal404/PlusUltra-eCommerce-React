@@ -8,7 +8,7 @@ const Home = () =>{
         <>
             <Main/>
             <Carrousel/>
-            <Productos url={"/productos"}/>
+            <Productos/>
         </>
     );
 }

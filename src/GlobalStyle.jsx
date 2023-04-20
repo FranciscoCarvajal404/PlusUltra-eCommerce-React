@@ -160,6 +160,10 @@ body {
       font-weight: bold;
     }
 
+    *{
+      font-family: 'Roboto', sans-serif;
+    }
+
 `
 
 export default GlobalStyle
