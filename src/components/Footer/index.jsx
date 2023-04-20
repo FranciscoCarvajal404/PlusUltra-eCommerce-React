@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { colorClaro, colorSecundario } from "../UI/variables";
 
+import logo from "../../img/logo.svg"
+import linkedin from "../../img/linkedin.svg"
+import github from "../../img/github.svg"
+
 const StyledFooter = styled.footer`
 
     display: flex;
@@ -59,7 +63,7 @@ const Footer = () =>{
     return(
         <StyledFooter>
             <div className="logo">
-                <img src="src/img/logo.svg" alt="PlusUltra logo"/>
+                <img src={logo} alt="PlusUltra logo"/>
                 <span><b>Plus</b>Ultra</span>
             </div>
 
@@ -73,8 +77,8 @@ const Footer = () =>{
             </div>
 
             <div className="redes">
-                <a href="https://github.com/FranciscoCarvajal404" target="_blank"><img src="src/img/github.svg" alt="GitHub" className="redes__img"/></a>
-                <a href="https://www.linkedin.com/in/francisco-carvajal-villegas/" target="_blank"><img src="src/img/linkedin.svg" alt="LinkedIn" className="redes__img"/></a>
+                <a href="https://github.com/FranciscoCarvajal404" target="_blank"><img src={github} alt="GitHub" className="redes__img"/></a>
+                <a href="https://www.linkedin.com/in/francisco-carvajal-villegas/" target="_blank"><img src={linkedin} alt="LinkedIn" className="redes__img"/></a>
             </div>
         </StyledFooter>
     );

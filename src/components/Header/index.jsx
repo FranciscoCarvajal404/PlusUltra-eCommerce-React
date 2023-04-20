@@ -3,9 +3,12 @@ import styled from "styled-components";
 import { colorClaro } from "../UI/variables";
 import { Button } from "../UI";
 
+import logo from "../../img/logo.svg"
+import lupa from "../../img/lupa.svg"
+
 const StyleHeader = styled.header`
     width: 100%;
-    height: 70px;
+    height: 90px;
     box-sizing: border-box;
 
     color: ${colorClaro};
@@ -86,7 +89,7 @@ const Header = () =>{
     return(
         <StyleHeader className="header">
             <h1>
-                <img src="src/img/logo.svg" alt="Plus Ultra logo"/>
+                <img src={logo} alt="Plus Ultra logo"/>
                 <span><b>Plus</b>Ultra</span>
             </h1>
 
@@ -99,7 +102,7 @@ const Header = () =>{
             </div>
 
             <div className="lupa">
-                <img src="src/img/lupa.svg" alt="Lupa"/>
+                <img src={lupa} alt="Lupa"/>
             </div>
         </StyleHeader>
     );

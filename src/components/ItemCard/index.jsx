@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 import { buscar } from "../../api/api"
 import { colorAcento } from "../UI/variables"
 
@@ -91,7 +92,7 @@ const ItemCard = ({tipo}) =>{
                                     <img src={imagen}/>
                                     <h3>{titulo}</h3>
                                     <p>{precio}</p>
-                                    <a className="link__producto">Ver producto</a>
+                                    <Link to={`/productos/${id}`} preventScrollReset={false} className="link__producto">Ver producto</Link>
                                 </div>
                             )
                         }
