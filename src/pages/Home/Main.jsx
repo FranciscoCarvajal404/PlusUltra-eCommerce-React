@@ -2,8 +2,10 @@ import styled from "styled-components";
 import { colorClaro } from "../../components/UI/variables";
 import { Button } from "../../components/UI"
 
+import mainBg from "../../img/main-bg.jpg"
+
 const StyledMain = styled.main`
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(src/img/main-bg.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${mainBg});
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

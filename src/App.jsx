@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Page404 from "./pages/Page404";
 import Home from "./pages/Home";
 import ItemPage from "./pages/ItemPage"
+import Login from "./pages/Login";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/productos/:id' element={<ItemPage/>}/>
+            <Route path='/login' element={<Login/>}/>
             <Route path='*' element={<Page404/>}/>
           </Routes>
       <Footer/>

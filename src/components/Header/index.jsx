@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import { colorClaro } from "../UI/variables";
 import { Button } from "../UI";
@@ -41,7 +42,7 @@ const StyleHeader = styled.header`
 
         background: none;
         background-color: rgba(255, 255, 255, 0.2);
-        background-image: url(src/img/lupa.svg);
+        background-image: url(${lupa});
         background-repeat: no-repeat;
         background-position: 95%;
 
@@ -96,9 +97,9 @@ const Header = () =>{
             <input type="text" placeholder="¿Qué deseas buscar?"/>
 
             <div>
-                <a href="#">
+                <Link to="/login">
                     <Button>Login</Button>
-                </a>
+                </Link>
             </div>
 
             <div className="lupa">

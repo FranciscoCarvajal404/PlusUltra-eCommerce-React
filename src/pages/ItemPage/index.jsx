@@ -8,7 +8,7 @@ import { colorClaro } from "../../components/UI/variables";
 
 const StyledItemPage = styled.main`
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
 
     display: flex;
     justify-content: center;
@@ -25,6 +25,9 @@ const StyledItemPage = styled.main`
 
         margin-bottom: 32px;
         padding: 0 32px;
+
+        width: 100%;
+        max-width: 1054px;
         
         img{
         width: 100%;
@@ -42,20 +45,20 @@ const StyledItemPage = styled.main`
             
             h1{
 
-            font-size: 1.5rem;
+            font-size: 2rem;
             line-height: normal;
             margin-bottom: 16px
         }
 
             h2{
-                font-size: 1.2rem;
+                font-size: 1.5rem;
                 font-weight: bold;
                 margin-bottom: 16px
             }
 
             p{
                 text-align: left;
-                font-size: 1rem;
+                font-size: 1.3rem;
             }
         }
     }
