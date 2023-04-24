@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import login from "../../img/login-bg.jpg"
 import { Button } from "../../components/UI";
 
@@ -49,11 +48,16 @@ const ButtonLogin = styled(Button)`
     width: 100%;
 `
 
+const loginValidation = (e) =>{
+    e.preventDefault()
+    location.replace(`/productos`)
+}
+
 const Login = () =>{
     return(
         <StyledLogin>
             <div>
-                <form>
+                <form onSubmit={(e)=>loginValidation(e)}>
 
                     <label htmlFor="user">Usuario</label>
                     <input name="user" id="user"/>

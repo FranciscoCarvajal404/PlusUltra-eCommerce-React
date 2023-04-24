@@ -8,6 +8,7 @@ import Page404 from "./pages/Page404";
 import Home from "./pages/Home";
 import ItemPage from "./pages/ItemPage"
 import Login from "./pages/Login";
+import Productos from "./pages/Productos";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
             <Route path='/' element={<Home/>}/>
             <Route path='/productos/:id' element={<ItemPage/>}/>
             <Route path='/login' element={<Login/>}/>
+            <Route path='/productos' element={<Productos/>}/>
             <Route path='*' element={<Page404/>}/>
           </Routes>
       <Footer/>
