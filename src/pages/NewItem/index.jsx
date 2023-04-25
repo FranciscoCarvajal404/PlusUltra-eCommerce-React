@@ -1,10 +1,11 @@
+import { useState } from "react";
 import styled from "styled-components";
+import axios from "axios";
 
 import login from "../../img/login-bg.jpg"
 
 import { Button } from "../../components/UI";
 import { colorClaro } from "../../components/UI/variables";
-
 
 const StyledNewItem = styled.main`
     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(${login});
@@ -47,25 +48,60 @@ const ButtonNewItem = styled(Button)`
 `
 
 const NewItem = () =>{
+
+    const [item, setItem] = useState({
+        id: '',
+        imagen: "",
+        categoria: "",
+        titulo: "",
+        descripcion: "",
+        precio: ""
+    })
+
+    const handleInput = (e) =>{
+        setItem({...item, [e.target.name]: e.target.value})
+    }
+
+    const handleSubmit = (e) =>{
+        e.preventDefault()
+        /* axios.post('http://localhost:3000/productos', {item})
+        .then(response => console.log(response))
+        .catch(error => console.log(error))
+        console.log(item); */
+
+        axios({
+            method: 'post',
+            url: 'http://localhost:3000/productos',
+            data: {
+                id: item.id,
+                imagen: item.imagen,
+                categoria: item.categoria,
+                titulo: item.titulo,
+                descripcion: item.descripcion,
+                precio: item.precio,
+            }
+        })
+    }
+
     return(
         <StyledNewItem>
             <div>
-                <form>
+                <form onSubmit={(e) => handleSubmit(e)}>
 
-                    <label htmlFor="user">URL de la imagen</label>
-                    <input name="user" id="user"/>
+                    <label htmlFor="imagen">URL de la imagen</label>
+                    <input name="imagen" id="imagen" onChange={(e)=>handleInput(e)}/>
 
-                    <label htmlFor="user">Categoría</label>
-                    <input name="user" id="user"/>
+                    <label htmlFor="categoria">Categoría</label>
+                    <input name="categoria" id="categoria" onChange={(e)=>handleInput(e)}/>
                     
-                    <label htmlFor="user">Nombre del producto</label>
-                    <input name="user" id="user"/>
+                    <label htmlFor="titulo">Nombre del producto</label>
+                    <input name="titulo" id="titulo" onChange={(e)=>handleInput(e)}/>
 
-                    <label htmlFor="user">Precio</label>
-                    <input name="user" id="user"/>
+                    <label htmlFor="precio">Precio</label>
+                    <input name="precio" id="precio" onChange={(e)=>handleInput(e)}/>
                     
-                    <label htmlFor="user">Descripción </label>
-                    <input name="user" id="user"/>
+                    <label htmlFor="descripcion">Descripción</label>
+                    <input name="descripcion" id="descripcion" onChange={(e)=>handleInput(e)}/>
 
                     <ButtonNewItem>Agregar</ButtonNewItem>
                     

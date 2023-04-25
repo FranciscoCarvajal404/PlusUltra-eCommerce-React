@@ -31,7 +31,7 @@ const StyledItemPage = styled.main`
         
         img{
         width: 100%;
-        max-width: 500px;
+        max-width: 800px;
         aspect-ratio: 1/1;
         align-self: center;
         margin-bottom: 16px;
@@ -39,7 +39,7 @@ const StyledItemPage = styled.main`
         }
 
         .info{
-            width: 50%;
+            width: 100%;
             display: flex;
             flex-direction: column;
             
@@ -53,12 +53,12 @@ const StyledItemPage = styled.main`
             h2{
                 font-size: 1.5rem;
                 font-weight: bold;
-                margin-bottom: 16px
+                margin-bottom: 32px
             }
 
             p{
-                text-align: left;
                 font-size: 1.3rem;
+                line-height: normal;
             }
         }
     }
@@ -73,12 +73,16 @@ const StyledItemPage = styled.main`
             text-align: right;
 
             img{
-                width: 50%;
+                width: 100%;
+                margin-right: 64px;
             }
         }
 
         .info{
             align-items: flex-end;
+            p{
+                text-align: right;
+            }
         }
     }
     

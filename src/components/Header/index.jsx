@@ -90,7 +90,9 @@ const Header = () =>{
     return(
         <StyleHeader className="header">
             <h1>
-                <img src={logo} alt="Plus Ultra logo"/>
+                <Link to={`/`}>
+                    <img src={logo} alt="Plus Ultra logo"/>
+                </Link>
                 <span><b>Plus</b>Ultra</span>
             </h1>
 
