@@ -1,8 +1,11 @@
+import { useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import login from "../../img/login-bg.jpg"
 import { Button } from "../../components/UI";
 
 import { colorClaro } from "../../components/UI/variables";
+import axios from "axios";
 
 const StyledLogin = styled.main`
     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(${login});
@@ -48,24 +51,55 @@ const ButtonLogin = styled(Button)`
     width: 100%;
 `
 
-const loginValidation = (e) =>{
-    e.preventDefault()
-    location.replace(`/productos`)
-}
+const Login = ({handleLog}) =>{
 
-const Login = () =>{
+    const [user, setUser] = useState(null)
+    const [log, setLog] = useState(null)
+
+    const handleInput = (e) =>{
+        setUser({...user, [e.target.name]: e.target.value})
+    }
+
+    const url = 'http://localhost:3000/usuarios'
+
+    const loginValidation = async (e) =>{
+        e.preventDefault()
+        try {
+            const response = await axios.get(url)
+            for (let i = 0; i < response.data.length; i++) {
+                if (JSON.stringify(user) === JSON.stringify(response.data[i])) {
+                    console.log("adelante");
+                    setLog(user)
+                    handleLog(user)
+                    break;
+                }else{
+                    console.log("incorrecto");
+                }
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     return(
         <StyledLogin>
             <div>
                 <form onSubmit={(e)=>loginValidation(e)}>
 
-                    <label htmlFor="user">Usuario</label>
-                    <input name="user" id="user"/>
+                    <label htmlFor="usuario">Usuario</label>
+                    <input name="usuario" id="usuario" type="text" onChange={(e)=>handleInput(e)}/>
 
-                    <label htmlFor="user">Contraseña</label>
-                    <input name="user" id="user"/>
+                    <label htmlFor="password">Contraseña</label>
+                    <input name="password" id="password" type="password" onChange={(e)=>handleInput(e)}/>
 
-                    <ButtonLogin>Ingresar</ButtonLogin>
+                    {
+                        log?(
+                            <Link to={'/productos'}><ButtonLogin>Ingresar</ButtonLogin></Link>
+                        ):(
+                            <ButtonLogin>Ingresar</ButtonLogin>
+                        )
+                    }
+                    
                 </form>
             </div>
         </StyledLogin>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -86,7 +87,17 @@ const animateHeader = (e) =>{
 
 window.addEventListener("scroll", animateHeader);
 
-const Header = () =>{
+const Header = ({user, handleLog}) =>{
+
+    const [log, setLog] = useState(null)
+    
+    const logout = (e) => {
+        e.preventDefault()
+        setLog(null)
+        handleLog(null)
+    }
+        
+
     return(
         <StyleHeader className="header">
             <h1>
@@ -99,9 +110,13 @@ const Header = () =>{
             <input type="text" placeholder="¿Qué deseas buscar?"/>
 
             <div>
-                <Link to="/login">
-                    <Button>Login</Button>
-                </Link>
+                    {
+                        user ? (<Button onClick={(e)=>logout(e)}>Logout</Button>)
+                            :( 
+                                <Link to={'/login'}><Button>Login</Button></Link>
+                                
+                            )
+                    }
             </div>
 
             <div className="lupa">
