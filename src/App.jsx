@@ -32,8 +32,8 @@ function App() {
             <Route path='/login' element={<Login handleLog={handleLog}/>}/>
             <Route element={<ProtectedRoute user={user}/>}>
               <Route path='/productos' element={<Productos/>}/>
+              <Route path='/add-item' element={<NewItem/>}/>
             </Route>
-            <Route path='/add-item' element={<NewItem/>}/>
             <Route path='*' element={<Page404/>}/>
           </Routes>
       <Footer/>

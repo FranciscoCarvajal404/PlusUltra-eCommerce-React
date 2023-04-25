@@ -60,7 +60,7 @@ const Main = () =>{
     return(
         <StyledMain>
             <div>
-                <h2>Siempre hay algo más allá *(WIP)*</h2>
+                <h2>Siempre hay algo más allá</h2>
                 <h3>30% de descuento en telescopios seleccionados</h3>
                 <ButtonMain>Ver telescopios</ButtonMain>
             </div>
