@@ -10,6 +10,7 @@ import ItemPage from "./pages/ItemPage"
 import Login from "./pages/Login";
 import Productos from "./pages/Productos";
 import NewItem from "./pages/NewItem";
+import ProtectedRoute from "./components/ProtectedRoute";
 import { useState } from "react";
 
 function App() {
@@ -29,7 +30,9 @@ function App() {
             <Route path='/' element={<Home user={user} handleLog={handleLog}/>}/>
             <Route path='/productos/:id' element={<ItemPage/>}/>
             <Route path='/login' element={<Login handleLog={handleLog}/>}/>
-            <Route path='/productos' element={<Productos user={user}/>}/>
+            <Route element={<ProtectedRoute user={user}/>}>
+              <Route path='/productos' element={<Productos/>}/>
+            </Route>
             <Route path='/add-item' element={<NewItem/>}/>
             <Route path='*' element={<Page404/>}/>
           </Routes>

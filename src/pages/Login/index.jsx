@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import login from "../../img/login-bg.jpg"
 import { Button } from "../../components/UI";
 
@@ -61,6 +61,7 @@ const Login = ({handleLog}) =>{
     }
 
     const url = 'http://localhost:3000/usuarios'
+    const navigate = useNavigate()
 
     const loginValidation = async (e) =>{
         e.preventDefault()
@@ -70,8 +71,9 @@ const Login = ({handleLog}) =>{
                 if (JSON.stringify(user) === JSON.stringify(response.data[i])) {
                     console.log("adelante");
                     setLog(user)
+                    setUser(user)
                     handleLog(user)
-                    break;
+                    return navigate('/productos')
                 }else{
                     console.log("incorrecto");
                 }
@@ -92,14 +94,7 @@ const Login = ({handleLog}) =>{
                     <label htmlFor="password">Contraseña</label>
                     <input name="password" id="password" type="password" onChange={(e)=>handleInput(e)}/>
 
-                    {
-                        log?(
-                            <Link to={'/productos'}><ButtonLogin>Ingresar</ButtonLogin></Link>
-                        ):(
-                            <ButtonLogin>Ingresar</ButtonLogin>
-                        )
-                    }
-                    
+                    <ButtonLogin>Ingresar</ButtonLogin>
                 </form>
             </div>
         </StyledLogin>

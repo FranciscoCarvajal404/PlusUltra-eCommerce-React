@@ -209,6 +209,10 @@
     {
       "usuario": "paco",
       "password": "654321"
+    },
+    {
+      "usuario": "onich",
+      "password": "perros"
     }
   ]
 }
