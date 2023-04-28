@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
+import { AiFillDelete, AiFillEdit } from "react-icons/ai"
 import { buscar } from "../../api/api";
 
-import { colorAcento, colorClaro } from "../../components/UI/variables";
+import { colorAcento, colorClaro, colorSecundario} from "../../components/UI/variables";
 import {Button} from "../../components/UI"
 
 const ProductoBox = styled.main`
@@ -39,14 +39,46 @@ const StyledProducto = styled.div`
         margin-bottom: 72px;
 
         .item{
+            position: relative;
             flex: 1 0 43%;
             box-sizing: border-box;
+
+            .trash{
+                z-index: 1;
+                position: absolute;
+                top: 5%;
+                right: 20%;
+                width: 10%;
+                height: auto;
+
+                :hover{
+                    filter: invert(60%) sepia(96%) saturate(729%) hue-rotate(351deg) brightness(101%) contrast(98%);
+                    transition: all ease 0.2s;
+                    cursor: pointer;
+                }
+            }
+
+            .edit{
+                z-index: 1;
+                position: absolute;
+                top: 5.1%;
+                right: 5%;
+                width: 10%;
+                height: auto;
+                :hover{
+                filter: invert(60%) sepia(96%) saturate(729%) hue-rotate(351deg) brightness(101%) contrast(98%);
+                    transition: all ease 0.2s;
+                    cursor: pointer;
+                }
+            }
         }
 
             
             img{
+                background-color: black;
+                opacity: 0.6;
                 width: 100%;
-                border-radius: 20px;
+                border-radius: 5px;
                 aspect-ratio: 1/1;
                 margin-bottom: 16px;
             }
@@ -83,6 +115,20 @@ const Productos = () =>{
         buscar('/productos', setProductos)
     },['/productos'])
 
+    const eliminarItem = async (id) =>{
+        console.log("eliminado", id);
+        try {
+            const response = await fetch(`http://localhost:3000/productos/${id}`, {
+                method: "DELETE"
+            });
+            const newItems = productos.filter((item) => item.id != id)
+            setProductos(newItems)
+            return console.log(response);
+        } catch (e) {
+            return console.log(e);
+        }
+    }
+
     return(
         <ProductoBox>
             <div className="titulo">
@@ -99,6 +145,8 @@ const Productos = () =>{
                         const {id, imagen, titulo, precio} = producto
                         return(
                             <div key={id} className="item">
+                                <AiFillDelete className="trash" onClick={()=>eliminarItem(id)}/>
+                                <AiFillEdit className="edit"/>
                                 <Link to={`/productos/${id}`}>
                                     <img src={imagen}/>
                                 </Link>
