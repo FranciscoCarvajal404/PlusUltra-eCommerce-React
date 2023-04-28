@@ -25,12 +25,12 @@
       "precio": "$300"
     },
     {
-      "id": "5",
       "imagen": "https://m.media-amazon.com/images/I/710lKUS8llL.jpg",
       "categoria": "binoculares",
       "titulo": "Articulo 5",
+      "precio": "$500",
       "descripcion": "Descripcion 5",
-      "precio": "$500"
+      "id": "5"
     },
     {
       "id": "6",

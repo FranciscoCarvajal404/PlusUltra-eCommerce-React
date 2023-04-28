@@ -12,6 +12,7 @@ import Productos from "./pages/Productos";
 import NewItem from "./pages/NewItem";
 import ListItems from "./components/ListItems";
 import EditarItem from "./pages/EditarItem";
+import EditExitoso from "./pages/EditExitoso";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 
@@ -36,6 +37,7 @@ function App() {
               <Route path='/productos' element={<Productos/>}/>
               <Route path='/add-item' element={<NewItem/>}/>
               <Route path='/edit-item' element={<EditarItem/>}/>
+              <Route path='/edit-exitoso' element={<EditExitoso/>}/>
             </Route>
             <Route path='/telescopios' element={<ListItems category = "telescopios"/>}/>
             <Route path='/binoculares' element={<ListItems category = "binoculares"/>}/>

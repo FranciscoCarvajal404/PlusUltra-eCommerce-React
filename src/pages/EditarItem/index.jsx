@@ -103,7 +103,7 @@ const EditarItem = () =>{
 
         actualizarItem(imagen, categoria, titulo, precio, descripcion, id)
 
-        return navigate('/productos')
+        return navigate('/edit-exitoso')
     }
 
 
