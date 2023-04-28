@@ -89,7 +89,9 @@ const ItemCard = ({tipo}) =>{
                             i ++
                             return(
                                 <div key={id} className="item">
+                                <Link to={`/productos/${id}`} preventScrollReset={false}>
                                     <img src={imagen}/>
+                                </Link>
                                     <h3>{titulo}</h3>
                                     <p>{precio}</p>
                                     <Link to={`/productos/${id}`} preventScrollReset={false} className="link__producto">Ver producto</Link>

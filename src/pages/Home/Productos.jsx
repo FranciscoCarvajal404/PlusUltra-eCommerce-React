@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { colorClaro, colorAcento } from "../../components/UI/variables";
 
 import ItemCard from "../../components/ItemCard";
@@ -42,19 +43,19 @@ const Productos = () =>{
         <StyledProductos>
             <div className="encabezado">
                 <h2>Telescopios</h2>
-                <a href="#">Ver más 🠚</a>
+                <Link to='/telescopios'>Ver más 🠚</Link>
             </div>
             <ItemCard tipo='telescopios'/>
 
             <div className="encabezado">
                 <h2>Binoculares</h2>
-                <a href="#">Ver más 🠚</a>
+                <Link to='/binoculares'>Ver más 🠚</Link>
             </div>
             <ItemCard tipo='binoculares'/>
 
             <div className="encabezado">
                 <h2>Microscopios</h2>
-                <a href="#">Ver más 🠚</a>
+                <Link to='/microscopios'>Ver más 🠚</Link>
             </div>
             <ItemCard tipo='microscopios'/>
             

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { colorClaro } from "../../components/UI/variables";
 import { Button } from "../../components/UI"
 
@@ -62,7 +63,9 @@ const Main = () =>{
             <div>
                 <h2>Siempre hay algo más allá</h2>
                 <h3>30% de descuento en telescopios seleccionados</h3>
-                <ButtonMain>Ver telescopios</ButtonMain>
+                <Link to='/telescopios'>
+                    <ButtonMain>Ver telescopios</ButtonMain>
+                </Link>
             </div>
         </StyledMain>
     );

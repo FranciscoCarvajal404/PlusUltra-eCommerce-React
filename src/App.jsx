@@ -1,5 +1,5 @@
 import GlobalStyle from "./GlobalStyle";
-
+import { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -10,8 +10,9 @@ import ItemPage from "./pages/ItemPage"
 import Login from "./pages/Login";
 import Productos from "./pages/Productos";
 import NewItem from "./pages/NewItem";
+import ListItems from "./components/ListItems";
 import ProtectedRoute from "./components/ProtectedRoute";
-import { useState } from "react";
+
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
   return (
     <>
       <GlobalStyle/>
-      <Router>
+      <Router basename="/PlusUltra-eCommerce-React">
         <Header user={user} handleLog={handleLog}/>
           <Routes>
             <Route path='/' element={<Home user={user} handleLog={handleLog}/>}/>
@@ -34,6 +35,9 @@ function App() {
               <Route path='/productos' element={<Productos/>}/>
               <Route path='/add-item' element={<NewItem/>}/>
             </Route>
+            <Route path='/telescopios' element={<ListItems category = "telescopios"/>}/>
+            <Route path='/binoculares' element={<ListItems category = "binoculares"/>}/>
+            <Route path='/microscopios' element={<ListItems category = "microscopios"/>}/>
             <Route path='*' element={<Page404/>}/>
           </Routes>
       <Footer/>

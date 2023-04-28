@@ -1,6 +1,11 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import {colorClaro} from "../../components/UI/variables"
 import { Button } from "../../components/UI";
+
+import telescopio from "../../img/telescopio.webp"
+import binoculares from "../../img/binoculares.webp"
+import microscopio from "../../img/microscopio.webp"
 
 const StyledCarrousel = styled.section`
     display: flex;
@@ -54,29 +59,36 @@ const Carrousel = () =>{
     return(
         <StyledCarrousel>
             <div className="categorias__grupo">
-                <img src="src/img/telescopio.webp" alt=""/>
+                <img src={telescopio} alt=""/>
                 <div>
                     <h2>Telescopios</h2>
                     <h3>Descubre el cosmos y el espacio</h3>
-                    <Button>Ver productos</Button>
+                    <Link to='/telescopios'>
+                        <Button>Ver productos</Button>
+                    </Link>
+                    
                 </div>
             </div>
                 
             <div className="categorias__grupo">
-                <img src="src/img/binoculares.webp" alt=""/>
+                <img src={binoculares} alt=""/>
                 <div>
                     <h2>Binoculares</h2>
                     <h3>Explora el cielo y las estrellas</h3>
-                    <Button>Ver productos</Button>
+                    <Link to='/binoculares'>
+                        <Button>Ver productos</Button>
+                    </Link>
                 </div>
             </div>
             
             <div  className="categorias__grupo">
-                <img src="src/img/microscopio.webp" alt=""/>
+                <img src={microscopio} alt=""/>
                 <div>
                     <h2>Microscopios</h2>
                     <h3>Conoce el reino microscopico</h3>
-                    <Button>Ver productos</Button>
+                    <Link to='/microscopios'>
+                        <Button>Ver productos</Button>
+                    </Link>
                 </div>
             </div>
         </StyledCarrousel>
