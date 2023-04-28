@@ -64,10 +64,6 @@ const NewItem = () =>{
 
     const handleSubmit = (e) =>{
         e.preventDefault()
-        /* axios.post('http://localhost:3000/productos', {item})
-        .then(response => console.log(response))
-        .catch(error => console.log(error))
-        console.log(item); */
 
         axios({
             method: 'post',
@@ -86,7 +82,7 @@ const NewItem = () =>{
     return(
         <StyledNewItem>
             <div>
-                <form onSubmit={(e) => handleSubmit(e)}>
+                <form onSubmit={(e) => handleSubmit(e)} data-form>
 
                     <label htmlFor="imagen">URL de la imagen</label>
                     <input name="imagen" id="imagen" onChange={(e)=>handleInput(e)}/>

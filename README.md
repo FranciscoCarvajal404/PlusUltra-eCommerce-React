@@ -1,6 +1,15 @@
 # PlusUltra-eCommerce-React
 
 Proyecto desarrollado con React.
-Simula una API con db.json (uso localmente json-server, todavía no funciona esa parte en GH Pages)
+Simula una API con db.json.
 
-React router y styled components
+## Claves de login: 
+    user: francisco
+    password: 123456
+
+    ó
+
+    user: paco
+    password: 654321
+
+### Este proyecto utiliza react router, styled components y react-icons

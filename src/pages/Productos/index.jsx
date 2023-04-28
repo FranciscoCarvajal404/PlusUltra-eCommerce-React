@@ -146,7 +146,9 @@ const Productos = () =>{
                         return(
                             <div key={id} className="item">
                                 <AiFillDelete className="trash" onClick={()=>eliminarItem(id)}/>
-                                <AiFillEdit className="edit"/>
+                                <Link to={`/edit-item?id=${id}`}>
+                                    <AiFillEdit className="edit"/>
+                                </Link>
                                 <Link to={`/productos/${id}`}>
                                     <img src={imagen}/>
                                 </Link>

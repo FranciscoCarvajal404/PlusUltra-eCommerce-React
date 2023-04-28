@@ -9,12 +9,12 @@
       "precio": "$100"
     },
     {
-      "id": "2",
       "imagen": "https://static.vecteezy.com/system/resources/previews/004/533/962/non_2x/senior-man-outside-enjoying-nature-looking-through-binoculars-photo.jpg",
       "categoria": "binoculares",
       "titulo": "Articulo 2",
+      "precio": "$200",
       "descripcion": "Descripcion 2",
-      "precio": "$200"
+      "id": "2"
     },
     {
       "id": "3",
@@ -23,14 +23,6 @@
       "titulo": "Articulo 3",
       "descripcion": "Descripcion 3",
       "precio": "$300"
-    },
-    {
-      "id": "4",
-      "imagen": "https://us.123rf.com/450wm/nanastudio/nanastudio2101/nanastudio210100106/161598098-mirando-a-trav%C3%A9s-de-los-binoculares-concepto-de-viaje-activo.jpg?ver=6",
-      "categoria": "binoculares",
-      "titulo": "Articulo 4",
-      "descripcion": "Descripcion 4",
-      "precio": "$100"
     },
     {
       "id": "5",

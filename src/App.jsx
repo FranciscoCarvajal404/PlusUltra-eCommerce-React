@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import Productos from "./pages/Productos";
 import NewItem from "./pages/NewItem";
 import ListItems from "./components/ListItems";
+import EditarItem from "./pages/EditarItem";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 
@@ -25,7 +26,7 @@ function App() {
   return (
     <>
       <GlobalStyle/>
-      <Router basename="/PlusUltra-eCommerce-React">
+      <Router basename="/PlusUltra-eCommerce-React/">
         <Header user={user} handleLog={handleLog}/>
           <Routes>
             <Route path='/' element={<Home user={user} handleLog={handleLog}/>}/>
@@ -34,6 +35,7 @@ function App() {
             <Route element={<ProtectedRoute user={user}/>}>
               <Route path='/productos' element={<Productos/>}/>
               <Route path='/add-item' element={<NewItem/>}/>
+              <Route path='/edit-item' element={<EditarItem/>}/>
             </Route>
             <Route path='/telescopios' element={<ListItems category = "telescopios"/>}/>
             <Route path='/binoculares' element={<ListItems category = "binoculares"/>}/>
