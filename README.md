@@ -1,7 +1,7 @@
 # PlusUltra-eCommerce-React
 
 Proyecto desarrollado con React.
-Simula una API con db.json.
+Simula una API con json-server
 
 ## Claves de login: 
     user: francisco
